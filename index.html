@@ -40,8 +40,25 @@
 <script type="text/javascript" src="/js/base.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
-	function login(e){console.log(e)};
-	function logout(e){console.log(e)};
+	WB2.anyWhere(function(W){
+    W.widget.connectButton({
+        id: "wb_connect_btn",	
+        type:"1,1",
+        callback : {
+            login:function(o){	//登录后的回调函数
+			console.log(login)
+			console.log(e)
+            },	
+            logout:function(){	//退出后的回调函数
+            console.log("logout")
+			console.log(e)
+			}
+        }
+    });
+});
+	
+	
+	
 		$("#login").click(function() {
 			var email = $("#email").val();
 			var username = $("#username").val();
