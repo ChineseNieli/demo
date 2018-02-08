@@ -1,9 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wb="http://open.weibo.com/wb">
 <head>
 <meta property="wb:webmaster" content="b1b3bcc0c7240dcb" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>注册页面</title>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2017969725" type="text/javascript" charset="utf-8"></script>
 </head>
 <style type="text/css">
 .myform {
@@ -28,6 +29,9 @@
 			</p>
 			<p>
 				<input type="button" id="login" value="登录" />
+			</p>
+			<p>
+			<wb:login-button type="3,2" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
 			</p>
 		</div>
 	</fieldset>
