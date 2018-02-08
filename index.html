@@ -15,6 +15,9 @@
 
 </style>
 <body>
+			<p>
+			<wb:login-button type="1,1" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
+			</p>
 	<fieldset class="myform">
 		<legend>注册页面</legend>
 		<div class="content">
@@ -30,9 +33,6 @@
 			<p>
 				<input type="button" id="login" value="登录" />
 			</p>
-			<p>
-			<wb:login-button type="3,2" onlogin="login" onlogout="logout">登录按钮</wb:login-button>
-			</p>
 		</div>
 	</fieldset>
 </body>
@@ -40,6 +40,8 @@
 <script type="text/javascript" src="/js/base.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
+	function login(e){console.log(e)};
+	function logout(e){console.log(e)};
 		$("#login").click(function() {
 			var email = $("#email").val();
 			var username = $("#username").val();
